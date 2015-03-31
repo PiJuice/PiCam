@@ -15,7 +15,9 @@ os.environ["SDL_FBDEV"] = "/dev/fb1"
 pygame.init()
 
 pygame.mouse.set_visible(0)
-BACKDISPLAY = pygame.display.set_mode((320, 240)) # initialise a window with the correct resolution
+DISPLAY_WIDTH = 320
+DISPLAY_HEIGHT = 240
+BACKDISPLAY = pygame.display.set_mode((DISPLAY_WIDTH, DISPLAY_HEIGHT)) # initialise a window with the correct resolution
 
 BLACK = ( 0, 0, 0)
 WHITE = (255, 255, 255)
@@ -50,7 +52,7 @@ while True:
 	
 		call ([argument], shell = True) # call the "raspistill" bash command
 		surf = pygame.image.load(filename) # load the photo just taken
-		picture = pygame.transform.scale(surf,(320, 240)) # transform photo to fill screen
+		picture = pygame.transform.scale(surf,(DISPLAY_WIDTH, DISPLAY_HEIGHT)) # transform photo to fill screen
 		BACKDISPLAY.blit(picture,(0,0)) # change background image to the photo
 		pygame.display.flip()
 		time.sleep(8) # leave for 8 seconds
