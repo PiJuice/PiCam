@@ -7,4 +7,4 @@ Important: Before downloading, make sure that you have created a new directory f
 "mkdir PiCam"
 "cd PiCam"
  
-To download: "git clone https://github.com/pijuice/PiCam.git" 
+To download: "git clone https://github.com/matt-the-ogre/PiCam.git" 
